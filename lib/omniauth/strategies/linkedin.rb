@@ -10,11 +10,11 @@ module OmniAuth
       # initializing your consumer from the OAuth gem.
       option :client_options, {
         :site => 'https://api.linkedin.com',
-        :authorize_url => 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code',
-        :token_url => 'https://www.linkedin.com/uas/oauth2/accessToken'
+        :authorize_url => 'https://www.linkedin.com/oauth/v2/authorization?response_type=code',
+        :token_url => 'https://www.linkedin.com/oauth/v2/accessToken'
       }
 
-      option :scope, 'r_basicprofile r_emailaddress'
+      option :scope, nil
       option :fields, ['id', 'email-address', 'first-name', 'last-name', 'headline', 'location', 'industry', 'picture-url', 'public-profile-url']
 
       # These are called after authentication has succeeded. If
